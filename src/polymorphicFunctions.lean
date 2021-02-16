@@ -53,6 +53,8 @@ def id : Π { α : Type u}, α → α :=
 #eval id _
 #eval id nat _
 #eval (@id nat) _
+-- @fn specifies that all arguments should
+-- be provided, even the type parameters
 
 #check 1
 #check nat 

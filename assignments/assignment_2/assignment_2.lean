@@ -33,6 +33,16 @@ by a smaller ST expression (similarly).
 -/
 
 -- YOUR DATA TYPE DEFINITION HERE
+inductive STSyntax : Type
+| nil : STSyntax
+| salmon : STSyntax -> STSyntax
+| trout : STSyntax -> STSyntax
+namespace hidden
+universe u
+inductive listp (α : Type u) : Type u
+| nil : listp
+| cons : α → listp → listp
+end hidden
 
 /-
 Now assume that the *meaning* of a 
